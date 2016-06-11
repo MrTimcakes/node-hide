@@ -54,13 +54,33 @@ exports.findWindow = function(name){
 }
 
 exports.hideWindow = function(handle){
-  user32.ShowWindow(handle, 0);
+  console.log(typeof handle);
+  if(typeof handle === 'object'){
+    handle.forEach(function(e){user32.ShowWindow(e, 0);});
+  }else if(typeof handle === 'number'){
+    user32.ShowWindow(handle, 0);
+  }else{
+    Error("Handle wasn't array/number")
+  }
 }
 
 exports.showWindow = function(handle){
-  user32.ShowWindow(handle, 1);
+  console.log(typeof handle);
+  if(typeof handle === 'object'){
+    handle.forEach(function(e){user32.ShowWindow(e, 1);});
+  }else if(typeof handle === 'number'){
+    user32.ShowWindow(handle, 1);
+  }else{
+    Error("Handle wasn't array/number")
+  }
 }
 
 exports.setWindow = function(handle, state){
-  user32.ShowWindow(handle, state); //use values from https://msdn.microsoft.com/en-us/library/windows/desktop/ms633548.aspx
+  if(typeof handle === 'object'){
+    handle.forEach(function(e){user32.ShowWindow(e, state);});
+  }else if(typeof handle === 'number'){
+    user32.ShowWindow(handle, state); //use values from https://msdn.microsoft.com/en-us/library/windows/desktop/ms633548.aspx
+  }else{
+    Error("Handle wasn't array/number")
+  }
 }
