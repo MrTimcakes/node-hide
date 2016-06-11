@@ -1,6 +1,6 @@
 # node-hide
 [![Build Status](https://travis-ci.org/MrTimcakes/node-hide.svg?branch=master)](https://travis-ci.org/MrTimcakes/node-hide)
-[![NPM status](https://nodei.co/npm/node-hide.png?compact=true)]
+[![NPM status](https://nodei.co/npm/node-hide.png?compact=true)](https://www.npmjs.com/package/node-hide)
 
 Node-hide is an NPM Module that handles all the quirks of hiding and showing windows for you.
 
