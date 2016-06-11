@@ -1,5 +1,6 @@
 # node-hide
 [![Build Status](https://travis-ci.org/MrTimcakes/node-hide.svg?branch=master)](https://travis-ci.org/MrTimcakes/node-hide)
+[![NPM status](https://nodei.co/npm/node-hide.png?compact=true)]
 
 Node-hide is an NPM Module that handles all the quirks of hiding and showing windows for you.
 
@@ -7,7 +8,7 @@ Internally node-hide uses "user32.dll" via ffi and so is, for the time being, Wi
 
 ## Quick Start
 
-### Install prerequisites
+### Install Prerequisites
 
 Make sure you've installed all the [necessary build
 tools](https://github.com/TooTallNate/node-gyp#installation) for your 'node-gyp', then invoke:
