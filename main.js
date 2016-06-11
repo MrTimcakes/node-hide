@@ -67,9 +67,9 @@ exports.hideWindow = function(handle){
 exports.showWindow = function(handle){
   console.log(typeof handle);
   if(typeof handle === 'object'){
-    handle.forEach(function(e){user32.ShowWindow(e, 1);});
+    handle.forEach(function(e){user32.ShowWindow(e, 5);});
   }else if(typeof handle === 'number'){
-    user32.ShowWindow(handle, 1);
+    user32.ShowWindow(handle, 5);
   }else{
     Error("Handle wasn't array/number")
   }
