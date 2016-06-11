@@ -17,7 +17,8 @@ tools](https://github.com/TooTallNate/node-gyp#installation) for your 'node-gyp'
 $ npm install node-hide
 ```
 
-Note: In order to compile with electron I was required to use electron-rebuild with `.\node_modules\.bin\electron-rebuild.cmd -w sqlite3 -p`
+Note: In order to compile with electron I was required to use electron-rebuild with
+`.\node_modules\.bin\electron-rebuild.cmd -w sqlite3 -p`
 
 ####  Examples
 
@@ -38,3 +39,11 @@ hide.visableWindows(function(data){
 //Output: {"65846":"Program Manager","132154":"Google - Google Chrome",
 //         "199568":"GitHub","331240":"Untitled - Notepad","1115138":"npm - Google Chrome"}
 ```
+
+### Support
+
+If you're having any problem, please [raise an issue](https://github.com/MrTimcakes/node-hide/issues/new) on GitHub.
+
+### License
+
+Hider is free Open-Source software, and is released under the GPL-3.0 License, further information can be found under the terms specified in the [license](https://github.com/MrTimcakes/node-hide/blob/master/LICENSE).
