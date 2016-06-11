@@ -1,6 +1,6 @@
 # node-hide
-[![Build Status](https://travis-ci.org/MrTimcakes/node-hide.svg?branch=master)](https://travis-ci.org/MrTimcakes/node-hide)
-[![NPM status](https://nodei.co/npm/node-hide.png?compact=true)](https://www.npmjs.com/package/node-hide)
+[![Travis](https://img.shields.io/travis/MrTimcakes/node-hide.svg?style=flat-square)](https://travis-ci.org/MrTimcakes/node-hide)
+[![NPM Status](https://img.shields.io/npm/v/npm.svg?style=flat-square)](https://www.npmjs.com/package/node-hide)
 
 Node-hide is an NPM Module that handles all the quirks of hiding and showing windows for you.
 
@@ -16,6 +16,8 @@ tools](https://github.com/TooTallNate/node-gyp#installation) for your 'node-gyp'
 ``` bash
 $ npm install node-hide
 ```
+
+Note: In order to compile with electron I was required to use electron-rebuild with `.\node_modules\.bin\electron-rebuild.cmd -w sqlite3 -p`
 
 ####  Examples
 
@@ -33,5 +35,6 @@ setTimeout(function(){
 hide.visableWindows(function(data){
   console.log(JSON.stringify(data)) //List all the Visable Windows
 });
-//Output: {"65846":"Program Manager","132154":"Google - Google Chrome","199568":"GitHub","331240":"Untitled - Notepad","1115138":"npm - Google Chrome"}
+//Output: {"65846":"Program Manager","132154":"Google - Google Chrome",
+//         "199568":"GitHub","331240":"Untitled - Notepad","1115138":"npm - Google Chrome"}
 ```
