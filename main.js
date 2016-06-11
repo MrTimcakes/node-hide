@@ -27,3 +27,15 @@ exports.findWindow = function(name){
   }
   return handle;
 }
+
+exports.hideWindow = function(handle){
+  user32.ShowWindow(handle, 0);
+}
+
+exports.showWindow = function(handle){
+  user32.ShowWindow(handle, 1);
+}
+
+exports.setWindow = function(handle, state){
+  user32.ShowWindow(handle, state); //use values from https://msdn.microsoft.com/en-us/library/windows/desktop/ms633548.aspx
+}

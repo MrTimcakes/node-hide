@@ -1,3 +1,6 @@
 var hide = require('./main.js');
 
-console.log(hide.findWindow('Untitled - Notepad'));
+var handle = hide.findWindow('Untitled - Notepad')
+
+hide.hideWindow(handle);
+setTimeout(function(){hide.showWindow(handle);},500);
