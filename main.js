@@ -12,6 +12,7 @@ var user32 = ffi.Library('user32.dll', {
   EnumWindows : ['bool', [voidPtr, 'int32']],
   FindWindowW : ['int', ['string', 'string']],
   ShowWindow : ['int', ['int', 'int']],
+  CloseWindow  : ['long', ['long']],
   GetWindowTextA  : ['long', ['long', stringPtr, 'long']],
   GetWindowTextLengthA  : ['long', ['long']],
   IsWindowVisible  : ['long', ['long']],
@@ -38,9 +39,8 @@ exports.visableWindows = function(callback){
     user32.GetWindowTextA(hwnd, buf, length+1);
     var name = ref.readCString(buf, 0);
 
-
     enumWindowsArray[hwnd] = name;
-    //console.log(hwnd + ':' + name);
+
     return true;
   }), 0);
 }
@@ -54,7 +54,6 @@ exports.findWindow = function(name){
 }
 
 exports.hideWindow = function(handle){
-  console.log(typeof handle);
   if(typeof handle === 'object'){
     handle.forEach(function(e){user32.ShowWindow(e, 0);});
   }else if(typeof handle === 'number'){
@@ -65,7 +64,6 @@ exports.hideWindow = function(handle){
 }
 
 exports.showWindow = function(handle){
-  console.log(typeof handle);
   if(typeof handle === 'object'){
     handle.forEach(function(e){user32.ShowWindow(e, 5);});
   }else if(typeof handle === 'number'){
@@ -80,6 +78,16 @@ exports.setWindow = function(handle, state){
     handle.forEach(function(e){user32.ShowWindow(e, state);});
   }else if(typeof handle === 'number'){
     user32.ShowWindow(handle, state); //use values from https://msdn.microsoft.com/en-us/library/windows/desktop/ms633548.aspx
+  }else{
+    Error("Handle wasn't array/number")
+  }
+}
+
+exports.closeWindow = function(handle){
+  if(typeof handle === 'object'){
+    handle.forEach(function(e){user32.CloseWindow(e);});
+  }else if(typeof handle === 'number'){
+    user32.CloseWindow(handle);
   }else{
     Error("Handle wasn't array/number")
   }
