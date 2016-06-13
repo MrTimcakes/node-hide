@@ -1,6 +1,6 @@
 # node-hide
 [![Travis](https://img.shields.io/travis/MrTimcakes/node-hide.svg?style=flat-square)](https://travis-ci.org/MrTimcakes/node-hide)
-[![NPM Status](https://img.shields.io/npm/v/npm.svg?style=flat-square)](https://www.npmjs.com/package/node-hide)
+[![NPM Status](https://img.shields.io/npm/v/node-hide.svg?style=flat-square)](https://www.npmjs.com/package/node-hide)
 
 Node-hide is an NPM Module that handles all the quirks of hiding and showing windows for you.
 

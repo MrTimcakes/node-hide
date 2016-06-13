@@ -1,6 +1,6 @@
 {
   "name": "node-hide",
-  "version": "1.2.1",
+  "version": "1.2.2",
   "description": "A Node Module to Ease Hiding/Showing Other Windows",
   "main": "main.js",
   "scripts": {
