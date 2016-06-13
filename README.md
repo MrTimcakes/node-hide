@@ -32,6 +32,10 @@ setTimeout(function(){
   hide.showWindow(handle); //Show Notepad After a 1 Second Timeout
 },1000);
 
+setTimeout(function(){
+  hide.closeWindow(handle); //close Notepad After a 5 Second Timeout
+},5000);
+
 
 hide.visableWindows(function(data){
   console.log(JSON.stringify(data)) //List all the Visable Windows
@@ -43,6 +47,10 @@ hide.visableWindows(function(data){
 ### Support
 
 If you're having any problem, please [raise an issue](https://github.com/MrTimcakes/node-hide/issues/new) on GitHub.
+
+### Contributors
+
+Thanks to [Shawn Rakowski](http://stackoverflow.com/users/3399439/shawn-rakowski) for the initial help on Stack Overflow
 
 ### License
 
