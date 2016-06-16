@@ -54,4 +54,4 @@ Thanks to [Shawn Rakowski](http://stackoverflow.com/users/3399439/shawn-rakowski
 
 ### License
 
-Hider is free Open-Source software, and is released under the GPL-3.0 License, further information can be found under the terms specified in the [license](https://github.com/MrTimcakes/node-hide/blob/master/LICENSE).
+node-hide is free Open-Source software, and is released under the GPL-3.0 License, further information can be found under the terms specified in the [license](https://github.com/MrTimcakes/node-hide/blob/master/LICENSE).
